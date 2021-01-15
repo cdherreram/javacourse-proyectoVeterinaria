@@ -7,7 +7,7 @@ import veterinaria.mundo.*;
 
 public class InterfazVeterinaria extends JFrame {
 
-	private Veterinaria veterinaria;
+	private ClinicaVeterinaria veterinaria;
 	private PanelImagen panelImagen;
 	private PanelMascotas panelMascotas;
 	private PanelMedicos panelMedicos;
