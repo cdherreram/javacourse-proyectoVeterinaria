@@ -11,6 +11,7 @@ public class Animal {
 	 * Atributos
 	 */
 	
+	
 	/**
 	 * Representa el id del animal
 	 */
@@ -69,7 +70,7 @@ public class Animal {
 	}
 
 	/*
-	 * Atributos
+	 * Metodos
 	 */
 	
 	/**
