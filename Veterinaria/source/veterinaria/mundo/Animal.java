@@ -138,7 +138,15 @@ public class Animal {
 	public Date getFechaIngreso() {
 		return fechaIngreso;
 	}
-	
+		
+	public double getNivelAlimento() {
+		return nivelAlimento;
+	}
+
+	public void setNivelAlimento(double nivelAlimento) {
+		this.nivelAlimento = nivelAlimento;
+	}
+
 	/*
 	 * Métodos
 	 */
