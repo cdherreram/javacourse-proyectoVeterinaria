@@ -1,4 +1,5 @@
 package veterinaria.mundo;
+import java.util.*;
 
 public class Asistente extends Empleado{
 	//Enumeraciones
@@ -10,8 +11,8 @@ public class Asistente extends Empleado{
 	private Puesto puesto;
 	
 	// Constructor
-	public Asistente(Puesto puesto) {
-		super();
+	public Asistente(Puesto puesto,int id,String nombre,Date fechaInicioLabores) {
+		super(id,nombre,fechaInicioLabores);
 		this.puesto = puesto;
 	}
 }

@@ -1,12 +1,14 @@
 package veterinaria.mundo;
 
+import java.util.Date;
+
 public class Gerente extends Empleado{
-	// Atributo
+	// Atributos
 	private boolean disponible;
 	
 	// Constructor
-	public Gerente(boolean disponible) {
-		super();
+	public Gerente(boolean disponible,int id,String nombre,Date fechaInicioLabores) {
+		super(id,nombre,fechaInicioLabores);
 		this.disponible = disponible;
 	}
 	

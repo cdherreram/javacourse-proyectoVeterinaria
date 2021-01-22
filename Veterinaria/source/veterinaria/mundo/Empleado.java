@@ -9,8 +9,8 @@ public class Empleado {
 	
 	// Atributos
 	private int id;
-	private Horario;
-	String nombre;
+	private Horario horario;
+	private String nombre;
 	private Date fechaInicioLabores;
 	
 	// Constructor
