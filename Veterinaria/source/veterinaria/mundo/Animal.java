@@ -5,12 +5,14 @@ package veterinaria.mundo;
  * @author Cristian David Herrera
  *
  */
+
+import java.util.*;
+
 public class Animal {
 	
 	/*
 	 * Atributos
 	 */
-	
 	
 	/**
 	 * Representa el id del animal
@@ -30,40 +32,47 @@ public class Animal {
 	/**
 	 * Representa la fecha de ingreso por primera vez del animal
 	 */
-	private String fechaIngreso;
+	private Date fechaIngreso;
 	
 	/**
-	 * Representa la última fecha de salida registrada para el animal
+	 * Representa la ï¿½ltima fecha de salida registrada para el animal
 	 */
-	private String fechaSalida;
+	private Date fechaSalida;
+	
+	/**
+	 * Representa el nivel de alimento que necesita el animal para sobrevivir
+	 */
+	private double nivelAlimento;
+	
 
 	/*
 	 * Constructores
 	 */
 	
 	/**
-	 * Construye un animal dados los parámetros.
+	 * Construye un animal dados los parï¿½metros.
 	 * @param idAnimal Id del animal
 	 * @param edad Edad del animal
 	 * @param nombreAnimal Nombre del animal
 	 * @param fechaIngreso Fecha de ingreso
 	 * @param fechaSalida Fecha de Salida
 	 */
-	public Animal(int idAnimal, int edad, String nombreAnimal, String fechaIngreso, String fechaSalida) {
+	public Animal(int idAnimal, int edad, String nombreAnimal, Date fechaIngreso, Date fechaSalida, double nivelAlimento) {
 		this.idAnimal = idAnimal;
 		this.edad = edad;
 		this.nombreAnimal = nombreAnimal;
 		this.fechaIngreso = fechaIngreso;
 		this.fechaSalida = fechaSalida;
+		this.nivelAlimento = nivelAlimento;
 	}
 	
 	/**
-	 * Construye un animal dados los parámetros.
+	 * Construye un animal dados los parï¿½metros.
 	 * @param edad Edad del animal
 	 * @param nombreAnimal Nombre del animal
 	 * @param fechaIngreso Fecha de ingreso
 	 */
-	public Animal ( int edad, String nombreAnimal, String fechaIngreso) {
+	public Animal ( int edad, String nombreAnimal, Date fechaIngreso) {
 		this.edad = edad;
 		this.nombreAnimal = nombreAnimal;
 		this.fechaIngreso = fechaIngreso;
@@ -83,7 +92,7 @@ public class Animal {
 	}
 
 	/**
-	 * Cambia la edad por parámetro
+	 * Cambia la edad por parï¿½metro
 	 * @param edad Nueva edad del animal
 	 */
 	public void setEdad(int edad) {
@@ -94,7 +103,7 @@ public class Animal {
 	 * Retorna la fecha de salida del animal
 	 * @return Fecha de salida del animal
 	 */
-	public String getFechaSalida() {
+	public Date getFechaSalida() {
 		return fechaSalida;
 	}
 
@@ -102,7 +111,7 @@ public class Animal {
 	 * Cambia la fecha de salida del animal
 	 * @param fechaSalida Nueva fecha de salida del animal
 	 */
-	public void setFechaSalida(String fechaSalida) {
+	public void setFechaSalida(Date fechaSalida) {
 		this.fechaSalida = fechaSalida;
 	}
 
@@ -126,7 +135,7 @@ public class Animal {
 	 * Retorna la fecha de ingreso del animal
 	 * @return fecha de ingreso
 	 */
-	public String getFechaIngreso() {
+	public Date getFechaIngreso() {
 		return fechaIngreso;
 	}
 	
