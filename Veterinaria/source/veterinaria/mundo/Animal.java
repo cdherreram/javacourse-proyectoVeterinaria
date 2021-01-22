@@ -8,7 +8,7 @@ package veterinaria.mundo;
 
 import java.util.*;
 
-public class Animal {
+public abstract class Animal {
 	
 	/*
 	 * Atributos
@@ -139,12 +139,18 @@ public class Animal {
 		return fechaIngreso;
 	}
 	
+	public void setNivelAlimento(double nuevoNivelAlimento) {
+		this.nivelAlimento = nuevoNivelAlimento;
+	}
+	
+	public double getNivelAlimento ( ) {
+		return this.nivelAlimento;
+	}
+	
 	/*
 	 * Métodos
 	 */
-	public boolean proximaAlimentacion( ) {
-		return true;
-	}
+	public abstract boolean proximaAlimentacion( );
 	
 	public String registrarOperacionEnHistorial (String operacion) {
 		return "";
@@ -154,5 +160,6 @@ public class Animal {
 		return "";
 	}
 	
+	public abstract String hablar();
 	
 }
