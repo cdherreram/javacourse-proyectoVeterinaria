@@ -139,8 +139,21 @@ public class Animal {
 		return fechaIngreso;
 	}
 	
+	/**
+	 * 
+	 * @return
+	 */
+	public boolean proximaAlimentacion( ) {
+		return true;
+	}
 	
+	public String registrarOperacionEnHistorial (String operacion) {
+		return "";
+	}
 	
+	public String alimentar() {
+		return "";
+	}
 	
 	
 }

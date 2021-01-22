@@ -31,8 +31,8 @@ public class Pez extends Animal{
 	 */
 	
 	/**
-	 * Esta funciÃ³n me dice si ya es necesario alimentar el pez
-	 * @return true si ya necesita la alimentaciÃ³n, false en otro caso
+	 * Esta función me dice si ya es necesario alimentar el pez
+	 * @return true si ya necesita la alimentación, false en otro caso
 	 */
 	public boolean proximaAlimentacion() {
 		return true;
