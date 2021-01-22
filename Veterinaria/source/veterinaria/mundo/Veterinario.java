@@ -25,7 +25,7 @@ public class Veterinario {
 	private List<Animal> pacientesConsulta;
 	
 	/*
-	 * constructores
+	 * Constructores
 	 */
 	public Veterinario(String especialidad, boolean enConsulta, List<Animal> pacientesConsulta) {
 		this.especialidad = especialidad;

@@ -22,8 +22,37 @@ public class Empleado {
 	}
 	
 	// Métodos
-	public void cambiarTurno(Horario nuevoHorario) {
-		
+	
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public Horario getHorario() {
+		return horario;
+	}
+
+	public void setHorario(Horario horario) {
+		this.horario = horario;
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public Date getFechaInicioLabores() {
+		return fechaInicioLabores;
+	}
+
+	public void setFechaInicioLabores(Date fechaInicioLabores) {
+		this.fechaInicioLabores = fechaInicioLabores;
 	}
 	
 
