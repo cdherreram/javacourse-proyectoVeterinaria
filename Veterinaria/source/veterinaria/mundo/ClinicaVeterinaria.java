@@ -4,29 +4,33 @@ import java.util.*;
 
 public class ClinicaVeterinaria {
 	
+	
+	/*
+	 * Constantes
+	 */
+	
+	public final static int MAX_EMPLEADOS = 50;
+	
 	/*
 	 * Atributos
 	 */
 	
-	private int MAX_EMPLEADOS;
-	private ArrayList<Animal> listaAnimales;
-	private ArrayList<Empleado> listaEmpleados;
+	
+	private List<Animal> listaAnimales;
+	private List<Empleado> listaEmpleados;
 	
 	
 	public ClinicaVeterinaria() {
-		MAX_EMPLEADOS = 50;
 		listaAnimales = new ArrayList<Animal>();
 		listaEmpleados = new ArrayList<Empleado>();
 	}	
 	
 	public ClinicaVeterinaria(ArrayList<Animal> listaAnimales) {
-		this.MAX_EMPLEADOS = 50;
 		this.listaAnimales = listaAnimales;
 		listaEmpleados = new ArrayList<Empleado>();
 	}
 	
 	public ClinicaVeterinaria(ArrayList<Animal> listaAnimales, ArrayList<Empleado> listaEmpleados) {
-		this.MAX_EMPLEADOS = 50;
 		this.listaAnimales = listaAnimales;
 		this.listaEmpleados = listaEmpleados;
 	}
@@ -35,21 +39,46 @@ public class ClinicaVeterinaria {
 	 * Metodos
 	 */
 	
-	public int getMAX_EMPLEADOS(){
-		return MAX_EMPLEADOS;
-	}
-	public ArrayList<Animal> getListaAnimales() {
+	public List<Animal> getListaAnimales() {
 		return listaAnimales;
 	}
 	public void setListaAnimales(ArrayList<Animal> listaAnimales) {
 		this.listaAnimales = listaAnimales;
 	}
-	public ArrayList<Empleado> getListaEmpleados() {
+	public List<Empleado> getListaEmpleados() {
 		return listaEmpleados;
 	}
 	public void setListaEmpleados(ArrayList<Empleado> listaEmpleados) {
 		this.listaEmpleados = listaEmpleados;
 	}	
+	
+	public Animal retornarAnimal( int idAnimal) {
+		return null;
+	}
+	
+	public List<Animal> retornarListaAnimales ( String nombreAnimal, String nombreDuenho){
+		return null;
+	}
+	
+	public String asignarCita ( Date fecha) {
+		return "";
+	}
+	
+	public String asignarCita ( Date fecha, String nombreVeterinario) {
+		return "";
+	}
+	
+	private Veterinario buscarVeterinarioDisponible ( Date fecha) {
+		return null;
+	}
+	
+	public void ordenarEmpleadosPorTurno ( ) {
+		
+	}
+	
+	public boolean darDeAlta ( int id) {
+		return true;
+	}
 	
 }
 

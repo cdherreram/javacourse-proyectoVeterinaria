@@ -1,6 +1,6 @@
 package veterinaria.mundo;
 
-import java.util.List;
+import java.util.*;
 
 public class Veterinario {
 	
@@ -8,7 +8,6 @@ public class Veterinario {
 	 * Atriburtos
 	 * 
 	 */
-
 	private String especialidad;
 	private boolean enConsulta;
 	private List<Animal> pacientesConsulta;
@@ -18,7 +17,6 @@ public class Veterinario {
 	 */
 	
 	public Veterinario(String especialidad, boolean enConsulta, List<Animal> pacientesConsulta) {
-		super();
 		this.especialidad = especialidad;
 		this.enConsulta = enConsulta;
 		this.pacientesConsulta = pacientesConsulta;
@@ -29,6 +27,13 @@ public class Veterinario {
 	 */
 	
 	
+	public boolean asignarCita ( String h, Date fecha ) {
+		return true;
+	}
+	
+	public List<Date> darHorariosOcupados ( ){
+		return null;
+	}
 		
 	
 }
