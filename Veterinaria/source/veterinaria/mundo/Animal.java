@@ -139,9 +139,8 @@ public class Animal {
 		return fechaIngreso;
 	}
 	
-	/**
-	 * 
-	 * @return
+	/*
+	 * Métodos
 	 */
 	public boolean proximaAlimentacion( ) {
 		return true;

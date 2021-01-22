@@ -18,12 +18,14 @@ public class ClinicaVeterinaria {
 	
 	private List<Animal> listaAnimales;
 	private List<Empleado> listaEmpleados;
+	private List<Historial> listaHistoriales;
 	
 	
 	public ClinicaVeterinaria() {
 		listaAnimales = new ArrayList<Animal>();
 		listaEmpleados = new ArrayList<Empleado>();
-	}	
+		listaHistoriales = new ArrayList<Historial>();
+	}
 	
 	public ClinicaVeterinaria(ArrayList<Animal> listaAnimales) {
 		this.listaAnimales = listaAnimales;
