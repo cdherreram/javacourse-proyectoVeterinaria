@@ -160,6 +160,4 @@ public abstract class Animal {
 		return "";
 	}
 	
-	public abstract String hablar();
-	
 }
