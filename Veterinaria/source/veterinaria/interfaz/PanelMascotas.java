@@ -12,18 +12,18 @@ public class PanelMascotas extends JPanel implements ActionListener {
 	/*
 	 * Constantes
 	 */
-	public final static String BOTON1 = "Botón 1";
-	public final static String BOTON2 = "Botón 2";
-	public final static String BOTON3 = "Botón 3";
-	public final static String BOTON4 = "Botón 4";
+	public final static String ALIMENTAR = "Botón 1";
+	public final static String DARALTA = "Botón 2";
+	public final static String AGREGAR = "Botón 3";
+	public final static String BUSCAR = "Botón 4";
 	
 	/*
 	 * Atributos
 	 */	
-	private JButton but1;
-	private JButton but2;
-	private JButton but3;
-	private JButton but4;
+	private JButton butAlimentar;
+	private JButton butDarAlta;
+	private JButton butAgregar;
+	private JButton butBuscar;
 		
 	private JScrollPane scrMascotas;
 	private JList listaMascotas;
@@ -66,26 +66,26 @@ public class PanelMascotas extends JPanel implements ActionListener {
 		panelBotones.setLayout(gl_panelBotones);
 		panelBotones.setSize(new Dimension(this.getWidth()/2, HEIGHT));
 		
-		but1 = new JButton("Botón 1");
-		but1.setActionCommand(BOTON1);
-		but1.addActionListener(this);
+		butAlimentar = new JButton("Alimentar");
+		butAlimentar.setActionCommand(ALIMENTAR);
+		butAlimentar.addActionListener(this);
 		
-		but2 = new JButton("Botón 2");
-		but2.setActionCommand(BOTON2);
-		but2.addActionListener(this);
+		butDarAlta = new JButton("Dar de alta");
+		butDarAlta.setActionCommand(DARALTA);
+		butDarAlta.addActionListener(this);
 		
-		but3 = new JButton("Botón 3");
-		but3.setActionCommand(BOTON3);
-		but3.addActionListener(this);
+		butAgregar = new JButton("Agregar");
+		butAgregar.setActionCommand(AGREGAR);
+		butAgregar.addActionListener(this);
 		
-		but4 = new JButton("Botón 4");
-		but4.setActionCommand(BOTON4);
-		but4.addActionListener(this);
+		butBuscar = new JButton("Buscar");
+		butBuscar.setActionCommand(BUSCAR);
+		butBuscar.addActionListener(this);
 		
-		panelBotones.add(but1);
-		panelBotones.add(but3);
-		panelBotones.add(but2);
-		panelBotones.add(but4);
+		panelBotones.add(butAlimentar);
+		panelBotones.add(butAgregar);
+		panelBotones.add(butDarAlta);
+		panelBotones.add(butBuscar);
 		
 		add(panelScrMascotas);
 		add(panelBotones);		
@@ -108,15 +108,14 @@ public class PanelMascotas extends JPanel implements ActionListener {
 		
 		String comando = evento.getActionCommand();
 		
-		if (comando.equals(BOTON1) ) {
+		if (comando.equals(ALIMENTAR) ) {
 			JOptionPane.showMessageDialog(this, "Pronto se implementará este botón");
-			
-		} else if ( comando.equals(BOTON3)) {
-			
-		} else if ( comando.equals(BOTON2)) {
-			
-		} else if ( comando.equals(BOTON4)) {
-			
+		} else if ( comando.equals(AGREGAR)) {
+			JOptionPane.showMessageDialog(this, "Pronto se implementará este botón");
+		} else if ( comando.equals(DARALTA)) {
+			JOptionPane.showMessageDialog(this, "Pronto se implementará este botón");
+		} else if ( comando.equals(BUSCAR)) {
+			JOptionPane.showMessageDialog(this, "Pronto se implementará este botón");
 		}
 	}
 	

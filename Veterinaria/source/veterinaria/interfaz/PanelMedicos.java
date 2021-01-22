@@ -11,14 +11,14 @@ public class PanelMedicos extends JPanel implements ActionListener {
 	/*
 	 * Constantes
 	 */
-	public final static String BOTON5 = "Botón 5";
-	public final static String BOTON6 = "Botón 6";
+	public final static String CAMBIARTURNO = "Botón 5";
+	public final static String ASIGNARCITA = "Botón 6";
 	
 	/*
 	 * Atributos
 	 */
-	private JButton but5;
-	private JButton but6;
+	private JButton butCambiarTurno;
+	private JButton butAsignarCita;
 	private JScrollPane scrMascotas;
 	private JList listaMedicos;
 	
@@ -50,15 +50,15 @@ public class PanelMedicos extends JPanel implements ActionListener {
 		add(panelBotones);
 		panelBotones.setLayout(new GridLayout(2, 1, 0, 0));
 		
-		but5 = new JButton("Botón 5");
-		but5.setActionCommand(BOTON5);
-		but5.addActionListener(this);
-		panelBotones.add(but5);
+		butCambiarTurno = new JButton("Cambiar turno");
+		butCambiarTurno.setActionCommand(CAMBIARTURNO);
+		butCambiarTurno.addActionListener(this);
+		panelBotones.add(butCambiarTurno);
 		
-		but6 = new JButton( "Botón 6");
-		but6.setActionCommand(BOTON6);
-		but6.addActionListener(this);
-		panelBotones.add(but6);
+		butAsignarCita = new JButton( "Asignar cita");
+		butAsignarCita.setActionCommand(ASIGNARCITA);
+		butAsignarCita.addActionListener(this);
+		panelBotones.add(butAsignarCita);
 	}
 	
 	public void refrescarLista( ArrayList nuevaLista) {
@@ -76,10 +76,10 @@ public class PanelMedicos extends JPanel implements ActionListener {
 	public void actionPerformed(ActionEvent evento) {
 		String comando = evento.getActionCommand();
 		
-		if ( comando.equals(BOTON6)) {
+		if ( comando.equals(ASIGNARCITA)) {
 			JOptionPane.showMessageDialog(this, "Pronto se implementará este botón");;
 			
-		} else if ( comando.equals(BOTON5)) {
+		} else if ( comando.equals(CAMBIARTURNO)) {
 			JOptionPane.showMessageDialog(this, "Pronto se implementará este botón");;
 			
 		}

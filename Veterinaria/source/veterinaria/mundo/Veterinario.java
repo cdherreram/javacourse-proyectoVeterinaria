@@ -1,24 +1,33 @@
 package veterinaria.mundo;
 
-import java.util.List;
+import java.util.*;
 
 public class Veterinario {
 	
+	public enum Especialidad {
+		CONSULTA_GENERAL,
+		ONCOLOGIA,
+		CARDIOLOGIA,
+		ODONTOLOGIA,
+		OFTALMOLOGIA,
+		FISIOTERAPIA,
+		ETOLOGIA,
+		REPRODUCCION,
+		ORTOPEDIA
+	}
+	
 	/*
-	 * Atriburtos
+	 * Atributos
 	 * 
 	 */
-
 	private String especialidad;
 	private boolean enConsulta;
 	private List<Animal> pacientesConsulta;
 	
 	/*
-	 * constructores
+	 * Constructores
 	 */
-	
 	public Veterinario(String especialidad, boolean enConsulta, List<Animal> pacientesConsulta) {
-		super();
 		this.especialidad = especialidad;
 		this.enConsulta = enConsulta;
 		this.pacientesConsulta = pacientesConsulta;
@@ -28,7 +37,12 @@ public class Veterinario {
 	 * Metodos
 	 */
 	
+	public boolean asignarCita ( String h, Date fecha ) { // 301 6019578
+		return true;
+	}
 	
-		
+	public List<Date> darHorariosOcupados ( ){
+		return null;
+	}
 	
 }

@@ -15,7 +15,6 @@ public class Duenho {
     private int cedulaCiudadania;
     private int telefonoContacto;
     
-    
     /**
      * Construye un objeto de tipo Duenho con los atributos de la clase
      * @param nombreCompleto Nombre completo del dueño de la mascota 
