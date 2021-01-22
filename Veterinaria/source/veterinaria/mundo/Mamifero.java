@@ -16,7 +16,7 @@ public class Mamifero extends Animal{
 		super(edad, nombreAnimal, fechaIngreso);
 	}
 	
-	
+
 	/*
 	 * Métodos
 	 */
@@ -26,7 +26,7 @@ public class Mamifero extends Animal{
 	 * Esta función me dice si ya es necesario alimentar el mamifero
 	 * @return true si ya necesita la alimentación, false en otro caso
 	 */
-	public boolean proximaAlimentacion() {
+	public boolean proximaAlimentacion ( ) {
 		return true;
 	}
 	

@@ -37,7 +37,4 @@ public class Pez extends Animal{
 	public boolean proximaAlimentacion() {
 		return true;
 	}
-	
-	
-	
 }
