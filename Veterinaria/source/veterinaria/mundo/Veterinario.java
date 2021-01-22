@@ -37,7 +37,7 @@ public class Veterinario {
 	 * Metodos
 	 */
 	
-	public boolean asignarCita ( String h, Date fecha ) { // 301 6019578
+	public boolean asignarCita ( String h, Date fecha ) { 
 		return true;
 	}
 	
