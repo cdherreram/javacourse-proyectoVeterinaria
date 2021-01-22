@@ -32,7 +32,7 @@ public class ClinicaVeterinaria {
 	}
 	
 	/*
-	 * Métodos
+	 * Metodos
 	 */
 	
 	public int getMAX_EMPLEADOS(){
