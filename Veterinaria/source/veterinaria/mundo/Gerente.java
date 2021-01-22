@@ -12,6 +12,10 @@ public class Gerente extends Empleado{
 		this.disponible = disponible;
 	}
 	
+	public Gerente (int id, String nombre, Date fechaInicioLabores) {
+		super(id, nombre, fechaInicioLabores);
+		this.disponible = false;
+	}
 	
 
 }
