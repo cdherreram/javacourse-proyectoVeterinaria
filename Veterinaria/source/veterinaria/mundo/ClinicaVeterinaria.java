@@ -49,7 +49,9 @@ public class ClinicaVeterinaria {
 	}
 	public void setListaEmpleados(ArrayList<Empleado> listaEmpleados) {
 		this.listaEmpleados = listaEmpleados;
-	}	
+	}
+
+
 	
 }
 
