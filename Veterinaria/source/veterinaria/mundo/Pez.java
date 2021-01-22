@@ -14,6 +14,9 @@ public class Pez extends Animal{
 		this.peceraAsignada = peceraAsignada;
 	}
 	
+	public boolean proximaAlimentacion() {
+		return true;
+	}
 	
 
 }

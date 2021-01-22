@@ -11,4 +11,9 @@ public class Mamifero extends Animal{
 	}
 	
 	
+	public boolean proximaAlimentacion ( ) {
+		
+		return true;
+	}
+	
 }
