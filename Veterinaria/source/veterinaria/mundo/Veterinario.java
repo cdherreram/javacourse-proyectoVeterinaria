@@ -23,14 +23,16 @@ public class Veterinario {
 	private String especialidad;
 	private boolean enConsulta;
 	private List<Animal> pacientesConsulta;
+	private List<Date> fechasConsulta;
 	
 	/*
 	 * Constructores
 	 */
-	public Veterinario(String especialidad, boolean enConsulta, List<Animal> pacientesConsulta) {
+	public Veterinario(String especialidad, boolean enConsulta) {
 		this.especialidad = especialidad;
 		this.enConsulta = enConsulta;
-		this.pacientesConsulta = pacientesConsulta;
+		this.pacientesConsulta = new ArrayList<Animal>();
+		this.fechasConsulta = new ArrayList<Date>();
 	}
 	
 	/*
@@ -47,7 +49,7 @@ public class Veterinario {
 	}
 	
 	public List<Date> darHorariosOcupados ( ){
-		return null;
+		return this.fechasConsulta;
 	}
 	
 }

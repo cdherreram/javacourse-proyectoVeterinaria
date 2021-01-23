@@ -31,7 +31,7 @@ public class Mamifero extends Animal{
 	 * @return true si ya necesita la alimentación, false en otro caso
 	 */
 	public boolean proximaAlimentacion ( ) {
-		if(super.getNivelAlimento <= this.cantidadMinimaAlimento){
+		if(super.getNivelAlimento() <= this.cantidadMinimaAlimento){
 			return true;
 		}else{
 			return false;
