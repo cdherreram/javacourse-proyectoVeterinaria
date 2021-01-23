@@ -52,7 +52,9 @@ public class ClinicaVeterinaria {
 	}
 	public void setListaEmpleados(ArrayList<Empleado> listaEmpleados) {
 		this.listaEmpleados = listaEmpleados;
-	}	
+	}
+
+
 	
 	public Animal retornarAnimal( int idAnimal) {
 		return null;
