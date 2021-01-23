@@ -43,6 +43,7 @@ public class Veterinario {
 		if(darHorariosOcupados().contains(fecha)) {
 			pacientesConsulta.add(animal);
 			fechasConsulta.add(fecha);
+			return true;
 		}else {
 			return false;
 		}
