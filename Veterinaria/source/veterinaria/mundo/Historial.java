@@ -87,6 +87,15 @@ public class Historial {
 		this.recomendaciones = recomendaciones;
 	}
 	
+	public Historial ( String fechaIngreso, String fechaRegistro) {
+		this.fechaIngreso = fechaIngreso;
+		this.fechaRegistro = fechaRegistro;
+		this.fechaSalida = null;
+		this.procedimiento = null;
+		this.antecedentes = null;
+		this.tieneMedicamentos = false;
+		this.recomendaciones = null;
+ 	}
 	
 	/*
 	 * Métodos

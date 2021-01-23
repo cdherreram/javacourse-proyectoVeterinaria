@@ -30,4 +30,7 @@ public class Mamifero extends Animal{
 		return true;
 	}
 	
+	public String hablar () {
+		return "muuu";
+	}
 }

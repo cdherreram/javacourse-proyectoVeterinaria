@@ -44,6 +44,8 @@ public abstract class Animal {
 	 */
 	private double nivelAlimento;
 	
+	
+	private Historial historialAnimal;
 
 	/*
 	 * Constructores
@@ -64,6 +66,7 @@ public abstract class Animal {
 		this.fechaIngreso = fechaIngreso;
 		this.fechaSalida = fechaSalida;
 		this.nivelAlimento = nivelAlimento;
+		this.historialAnimal = new Historial(fechaIngreso.toString(), fechaIngreso.toString());
 	}
 	
 	/**

@@ -17,5 +17,4 @@ public class Gerente extends Empleado{
 		this.disponible = false;
 	}
 	
-
 }

@@ -38,6 +38,8 @@ public class Ave extends Animal{
 		return true;
 	}
 	
-	
+	public String hablar() {
+		return "pio pio";
+	}
 	
 }
