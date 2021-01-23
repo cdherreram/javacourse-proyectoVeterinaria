@@ -39,8 +39,14 @@ public class Veterinario {
 	 * Metodos
 	 */
 	
-	public boolean asignarCita ( String h, Date fecha ) { 
-		return true;
+	public boolean asignarCita ( Animal animal , Date fecha ) { 
+		if(darHorariosOcupados().contains(fecha)) {
+			pacientesConsulta.add(animal);
+			fechasConsulta.add(fecha);
+			return true;
+		}else {
+			return false;
+		}
 	}
 	
 	public List<Date> darHorariosOcupados ( ){
