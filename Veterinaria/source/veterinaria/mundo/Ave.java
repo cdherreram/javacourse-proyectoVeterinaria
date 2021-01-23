@@ -30,12 +30,16 @@ public class Ave extends Animal{
 	 * Métodos
 	 */
 	
+	
 	/**
 	 * Esta función me dice si ya es necesario alimentar el ave
 	 * @return true si ya necesita la alimentación, false en otro caso
 	 */
 	public boolean proximaAlimentacion() {
-		return true;
+		if(getNivelAlimento()< 3/4) {
+			return true;
+		}
+		return false;
 	}
 	
 	

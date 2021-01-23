@@ -9,20 +9,24 @@ public class Pez extends Animal{
 	 */
 	
 	private int peceraAsignada;
+	private double nivelMinimoAlimento;
 	
 	
 	/*
 	 * Constructores
 	 */
 
-	public Pez(int idAnimal, int edad, String nombreAnimal, Date fechaIngreso, Date fechaSalida, double nivelAlimento, int peceraAsignada) {
+	public Pez(int idAnimal, int edad, String nombreAnimal, Date fechaIngreso, Date fechaSalida, double nivelAlimento, int peceraAsignada
+			, double nivelMinimoAlimento) {
 		super(idAnimal, edad, nombreAnimal, fechaIngreso, fechaSalida, nivelAlimento);
 		this.peceraAsignada = peceraAsignada;
+		this.nivelMinimoAlimento = nivelMinimoAlimento;
 	}
 
-	public Pez(int edad, String nombreAnimal, Date fechaIngreso, int peceraAsignada) {
+	public Pez(int edad, String nombreAnimal, Date fechaIngreso, int peceraAsignada, double nivelMinimoAlimento) {
 		super(edad, nombreAnimal, fechaIngreso);
 		this.peceraAsignada = peceraAsignada;
+		this.nivelMinimoAlimento = nivelMinimoAlimento;
 	}
 	
 	
@@ -35,6 +39,10 @@ public class Pez extends Animal{
 	 * @return true si ya necesita la alimentación, false en otro caso
 	 */
 	public boolean proximaAlimentacion() {
-		return true;
+		return getNivelAlimento() < nivelMinimoAlimento ? true : false;
+	}
+	
+	public String hablar() {
+		return "glugluglu";
 	}
 }
