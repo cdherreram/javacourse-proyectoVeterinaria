@@ -141,15 +141,16 @@ public abstract class Animal {
 	public Date getFechaIngreso() {
 		return fechaIngreso;
 	}
-	
-	public void setNivelAlimento(double nuevoNivelAlimento) {
-		this.nivelAlimento = nuevoNivelAlimento;
+		
+	public double getNivelAlimento() {
+		return nivelAlimento;
 	}
-	
-	public double getNivelAlimento ( ) {
-		return this.nivelAlimento;
+
+	public void setNivelAlimento(double nivelAlimento) {
+		this.nivelAlimento = nivelAlimento;
 	}
-	
+
+
 	/*
 	 * Métodos
 	 */
