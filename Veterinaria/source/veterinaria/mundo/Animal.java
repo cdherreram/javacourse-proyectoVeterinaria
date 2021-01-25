@@ -15,9 +15,14 @@ public abstract class Animal {
 	 */
 	
 	/**
-	 * Representa el id del animal
+	 * Representa el id del animal (en meses)
 	 */
 	private int idAnimal;
+	
+	/**
+	 * Representa el conteo de los id para la clase animal
+	 */
+	private static int IdSiguiente = 1;
 	
 	/**
 	 * Representa la edad del animal
@@ -32,20 +37,19 @@ public abstract class Animal {
 	/**
 	 * Representa la fecha de ingreso por primera vez del animal
 	 */
-	private Date fechaIngreso;
+	private Date fechaUltimoIngreso;
 	
-	/**
-	 * Representa la ï¿½ltima fecha de salida registrada para el animal
-	 */
-	private Date fechaSalida;
 	
 	/**
 	 * Representa el nivel de alimento que necesita el animal para sobrevivir
 	 */
-	private double nivelAlimento;
+	private int nivelAlimento;
 	
 	
 	private Historial historialAnimal;
+	
+	
+	private int nivelMinimoAlimento;
 
 	/*
 	 * Constructores
@@ -57,35 +61,33 @@ public abstract class Animal {
 	 * @param edad Edad del animal
 	 * @param nombreAnimal Nombre del animal
 	 * @param fechaIngreso Fecha de ingreso
-	 * @param fechaSalida Fecha de Salida
 	 */
-	public Animal(int idAnimal, int edad, String nombreAnimal, Date fechaIngreso, Date fechaSalida, double nivelAlimento) {
+	public Animal(int idAnimal, int edad, String nombreAnimal, Date fechaIngreso,Historial historial) {
 		this.idAnimal = idAnimal;
 		this.edad = edad;
 		this.nombreAnimal = nombreAnimal;
-		this.fechaIngreso = fechaIngreso;
-		this.fechaSalida = fechaSalida;
-		this.nivelAlimento = nivelAlimento;
-		this.historialAnimal = new Historial(fechaIngreso.toString(), fechaIngreso.toString());
+		this.fechaUltimoIngreso = fechaIngreso;
+		this.nivelAlimento = 80;
+		this.historialAnimal = historial;
+		this.nivelMinimoAlimento = 0;
 	}
 	
-	/**
-	 * Construye un animal dados los parï¿½metros.
-	 * @param edad Edad del animal
-	 * @param nombreAnimal Nombre del animal
-	 * @param fechaIngreso Fecha de ingreso
-	 */
+
 	public Animal ( int edad, String nombreAnimal, Date fechaIngreso) {
+		this.idAnimal = IdSiguiente; IdSiguiente++;
 		this.edad = edad;
 		this.nombreAnimal = nombreAnimal;
-		this.fechaIngreso = fechaIngreso;
+		this.fechaUltimoIngreso = fechaIngreso;
+		this.nivelAlimento = 80;
+		this.historialAnimal = null;
+		this.nivelMinimoAlimento = 0;
 	}
 
 	/*
 	 * Metodos
 	 * 
 	 */
-	
+
 	/**
 	 * Retorna la edad del animal
 	 * @return Edad del animal
@@ -100,22 +102,6 @@ public abstract class Animal {
 	 */
 	public void setEdad(int edad) {
 		this.edad = edad;
-	}
-
-	/**
-	 * Retorna la fecha de salida del animal
-	 * @return Fecha de salida del animal
-	 */
-	public Date getFechaSalida() {
-		return fechaSalida;
-	}
-
-	/**
-	 * Cambia la fecha de salida del animal
-	 * @param fechaSalida Nueva fecha de salida del animal
-	 */
-	public void setFechaSalida(Date fechaSalida) {
-		this.fechaSalida = fechaSalida;
 	}
 
 	/**
@@ -139,17 +125,37 @@ public abstract class Animal {
 	 * @return fecha de ingreso
 	 */
 	public Date getFechaIngreso() {
-		return fechaIngreso;
+		return fechaUltimoIngreso;
 	}
-		
-	public double getNivelAlimento() {
+	
+	/**
+	 * Retorna el nivel de alimento que tiene el animal actualmente
+	 * @return nivel de alimento
+	 */
+	public int getNivelAlimento() {
 		return nivelAlimento;
 	}
 
-	public void setNivelAlimento(double nivelAlimento) {
+	public void setNivelAlimento(int nivelAlimento) {
 		this.nivelAlimento = nivelAlimento;
 	}
+	
+	public int getNivelMinimoAlimento() {
+		return nivelMinimoAlimento;
+	}
 
+	public void setNivelMinimoAlimento(int nivelMinimoAlimento) {
+		this.nivelMinimoAlimento = nivelMinimoAlimento;
+	}
+
+	public Historial getHistorialAnimal() {
+		return historialAnimal;
+	}
+
+
+	public void setHistorialAnimal(Historial historialAnimal) {
+		this.historialAnimal = historialAnimal;
+	}
 
 	/*
 	 * Métodos
@@ -161,7 +167,11 @@ public abstract class Animal {
 	}
 	
 	public String alimentar() {
-		return "";
+		if ( proximaAlimentacion()) {
+			setNivelAlimento(100);
+			return "El nuevo nivel de alimento es " + getNivelAlimento();
+		}
+		return "El animal no necesita alimento aún";
 	}
 	
 }

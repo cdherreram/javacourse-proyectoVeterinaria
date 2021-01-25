@@ -4,20 +4,20 @@ import java.util.*;
 
 public class Mamifero extends Animal{
 	
-	private int cantidadMinimaAlimento;
+	public final static int NIVEL_MINIMO_ALIMENTO_MAMIFERO = 30;
 	
 	/*
 	 * Constructores
 	 */
 
-	public Mamifero(int idAnimal, int edad, String nombreAnimal, Date fechaIngreso, Date fechaSalida, double nivelAlimento, int cantidadMinimaAlimento) {
-		super(idAnimal, edad, nombreAnimal, fechaIngreso, fechaSalida, nivelAlimento);
-		this.cantidadMinimaAlimento = cantidadMinimaAlimento;
+	public Mamifero(int idAnimal, int edad, String nombreAnimal, Date fechaIngreso, Historial historial) {
+		super(idAnimal, edad, nombreAnimal, fechaIngreso, historial);
+		setNivelMinimoAlimento(NIVEL_MINIMO_ALIMENTO_MAMIFERO);
 	}
 
-	public Mamifero(int edad, String nombreAnimal, Date fechaIngreso, int cantidadMinimaAlimento) {
+	public Mamifero(int edad, String nombreAnimal, Date fechaIngreso) {
 		super(edad, nombreAnimal, fechaIngreso);
-		this.cantidadMinimaAlimento = cantidadMinimaAlimento;
+		setNivelMinimoAlimento(NIVEL_MINIMO_ALIMENTO_MAMIFERO);
 	}
 	
 
@@ -31,14 +31,10 @@ public class Mamifero extends Animal{
 	 * @return true si ya necesita la alimentación, false en otro caso
 	 */
 	public boolean proximaAlimentacion ( ) {
-		if(super.getNivelAlimento() <= this.cantidadMinimaAlimento){
+		if(super.getNivelAlimento() < getNivelMinimoAlimento()){
 			return true;
 		}else{
 			return false;
 		}
-	}
-	
-	public String hablar () {
-		return "muuu";
 	}
 }

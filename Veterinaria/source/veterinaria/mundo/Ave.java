@@ -4,6 +4,8 @@ import java.util.Date;
 
 public class Ave extends Animal{
 	
+	public final static int NIVEL_MINIMO_ALIMENTO_AVE = 80;
+	
 	/*
 	 * Atributos
 	 */
@@ -15,14 +17,16 @@ public class Ave extends Animal{
 	 * Constructores
 	 */
 
-	public Ave(int idAnimal, int edad, String nombreAnimal, Date fechaIngreso, Date fechaSalida, double nivelAlimento, String estadoPlumaje) {
-		super(idAnimal, edad, nombreAnimal, fechaIngreso, fechaSalida, nivelAlimento);
+	public Ave(int idAnimal, int edad, String nombreAnimal, Date fechaIngreso, Historial historial, String estadoPlumaje) {
+		super(idAnimal, edad, nombreAnimal, fechaIngreso, historial);
 		this.estadoPlumaje = estadoPlumaje;
+		setNivelMinimoAlimento(NIVEL_MINIMO_ALIMENTO_AVE);
 	}
 
 	public Ave(int edad, String nombreAnimal, Date fechaIngreso, String estadoPlumaje) {
 		super(edad, nombreAnimal, fechaIngreso);
 		this.estadoPlumaje = estadoPlumaje;
+		setNivelMinimoAlimento(NIVEL_MINIMO_ALIMENTO_AVE);
 	}
 	
 	
@@ -36,14 +40,10 @@ public class Ave extends Animal{
 	 * @return true si ya necesita la alimentación, false en otro caso
 	 */
 	public boolean proximaAlimentacion() {
-		if(getNivelAlimento()< 3/4) {
+		if(getNivelAlimento() < getNivelMinimoAlimento()) {
 			return true;
 		}
 		return false;
-	}
-	
-	public String hablar() {
-		return "pio pio";
 	}
 	
 }

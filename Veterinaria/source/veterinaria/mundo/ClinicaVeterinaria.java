@@ -4,37 +4,23 @@ import java.util.*;
 
 public class ClinicaVeterinaria {
 	
-	
 	/*
 	 * Constantes
 	 */
-	
 	public final static int MAX_EMPLEADOS = 50;
 	
 	/*
 	 * Atributos
 	 */
-	
-	
 	private List<Animal> listaAnimales;
-	private List<Empleado> listaEmpleados;
+	private Empleado[] listaEmpleados;
 	private List<Historial> listaHistoriales;
 	
 	
 	public ClinicaVeterinaria() {
 		listaAnimales = new ArrayList<Animal>();
-		listaEmpleados = new ArrayList<Empleado>();
+		listaEmpleados = new Empleado[MAX_EMPLEADOS];
 		listaHistoriales = new ArrayList<Historial>();
-	}
-	
-	public ClinicaVeterinaria(ArrayList<Animal> listaAnimales) {
-		this.listaAnimales = listaAnimales;
-		listaEmpleados = new ArrayList<Empleado>();
-	}
-	
-	public ClinicaVeterinaria(ArrayList<Animal> listaAnimales, ArrayList<Empleado> listaEmpleados) {
-		this.listaAnimales = listaAnimales;
-		this.listaEmpleados = listaEmpleados;
 	}
 	
 	/*
@@ -47,20 +33,26 @@ public class ClinicaVeterinaria {
 	public void setListaAnimales(ArrayList<Animal> listaAnimales) {
 		this.listaAnimales = listaAnimales;
 	}
-	public List<Empleado> getListaEmpleados() {
+	public Empleado[] getListaEmpleados() {
 		return listaEmpleados;
 	}
-	public void setListaEmpleados(ArrayList<Empleado> listaEmpleados) {
+	public void setListaEmpleados(Empleado[] listaEmpleados) {
 		this.listaEmpleados = listaEmpleados;
 	}
-
-
 	
-	public Animal retornarAnimal( int idAnimal) {
+	public List<Historial> getListaHistoriales() {
+		return listaHistoriales;
+	}
+
+	public void setListaHistoriales(List<Historial> listaHistoriales) {
+		this.listaHistoriales = listaHistoriales;
+	}
+
+	public Animal retornarAnimal( String idAnimal ) {
 		return null;
 	}
 	
-	public List<Animal> retornarListaAnimales ( String nombreAnimal, String nombreDuenho){
+	public List<Animal> retornarListaAnimales ( String nombreAnimal, String nombreDuenho ){
 		return null;
 	}
 	
@@ -78,6 +70,10 @@ public class ClinicaVeterinaria {
 	
 	public void ordenarEmpleadosPorTurno ( ) {
 		
+	}
+	
+	public List<Historial> buscarHistorial ( String id){
+		return null;
 	}
 	
 	public boolean darDeAlta ( int id) {

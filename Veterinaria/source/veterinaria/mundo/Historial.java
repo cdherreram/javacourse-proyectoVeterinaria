@@ -2,39 +2,32 @@ package veterinaria.mundo;
 
 public class Historial {
 	
+	public enum Operacion{
+		CONSULTA,
+		COMPRA,
+		HOSPITALIZACION
+	}
+	
 	/*
 	 * Atributos
 	 */
 	
-	/**
-	 * Representa la fecha de ingreso del animal.
-	 */
-	private String fechaIngreso;
+	private Operacion tipoOperacion;
 	
+	/**
+	 * Representa el id del animal
+	 */
+	private int idAnimal;
 	
 	/**
 	 * Representa la fecha de registro del animal.
 	 */
 	private String fechaRegistro;
 	
-	
-	/**
-	 * Representa la fecha de salida del animal.
-	 */
-	private String fechaSalida;
-	
-	
 	/**
 	 * Representa el procedimiento médico que se le hizo al animal.
 	 */
-	private String procedimiento;
-	
-	
-	/**
-	 * Describe el antecedente médico del animal.
-	 */
-	private String antecedentes;
-	
+	private String descripcionOperacion;
 	
 	/**
 	 * Me dice si se le dieron medicamentos al animal.
@@ -42,11 +35,10 @@ public class Historial {
 	private boolean tieneMedicamentos;
 	
 	
-	/**
-	 * Representa las recomendaciones que se le dieron al animal cuando se fue.
-	 */
-	private String recomendaciones;
+	private String veterinario;
 	
+	
+	private String especialidad;
 	
 	/**
 	 * Construye un objeto de tipo Historial con los siguientes atributos:
@@ -55,13 +47,9 @@ public class Historial {
 	 * @param fechaSalida: Se agrega la fecha (dd/mm/yy) cuando sale el animal del procedimiento actual.
 	 */
 	public Historial(String fechaIngreso, String fechaRegistro, String fechaSalida) {
-		this.fechaIngreso = fechaIngreso;
 		this.fechaRegistro = fechaRegistro;
-		this.fechaSalida = fechaSalida;
-		this.procedimiento = "";
-		this.antecedentes = "";
+		this.descripcionOperacion = "";
 		this.tieneMedicamentos = false;
-		this.recomendaciones = "";
 	}
 
 
@@ -78,38 +66,20 @@ public class Historial {
 	public Historial(String fechaIngreso, String fechaRegistro, String fechaSalida,
 			String procedimiento, String antecedentes, boolean tieneMedicamentos,
 			String recomendaciones) {
-		this.fechaIngreso = fechaIngreso;
 		this.fechaRegistro = fechaRegistro;
-		this.fechaSalida = fechaSalida;
-		this.procedimiento = procedimiento;
-		this.antecedentes = antecedentes;
+		this.descripcionOperacion = procedimiento;
 		this.tieneMedicamentos = tieneMedicamentos;
-		this.recomendaciones = recomendaciones;
 	}
 	
 	public Historial ( String fechaIngreso, String fechaRegistro) {
-		this.fechaIngreso = fechaIngreso;
 		this.fechaRegistro = fechaRegistro;
-		this.fechaSalida = null;
-		this.procedimiento = null;
-		this.antecedentes = null;
+		this.descripcionOperacion = null;
 		this.tieneMedicamentos = false;
-		this.recomendaciones = null;
  	}
 	
 	/*
 	 * Métodos
 	 */
-
-	public String getFechaIngreso() {
-		return fechaIngreso;
-	}
-
-
-	public void setFechaIngreso(String fechaIngreso) {
-		this.fechaIngreso = fechaIngreso;
-	}
-
 
 	public String getFechaRegistro() {
 		return fechaRegistro;
@@ -120,36 +90,14 @@ public class Historial {
 		this.fechaRegistro = fechaRegistro;
 	}
 
-
-	public String getFechaSalida() {
-		return fechaSalida;
-	}
-
-
-	public void setFechaSalida(String fechaSalida) {
-		this.fechaSalida = fechaSalida;
-	}
-
-
 	public String getProcedimiento() {
-		return procedimiento;
+		return descripcionOperacion;
 	}
 
 
 	public void setProcedimiento(String procedimiento) {
-		this.procedimiento = procedimiento;
+		this.descripcionOperacion = procedimiento;
 	}
-
-
-	public String getAntecedentes() {
-		return antecedentes;
-	}
-
-
-	public void setAntecedentes(String antecedentes) {
-		this.antecedentes = antecedentes;
-	}
-
 
 	public boolean isTieneMedicamentos() {
 		return tieneMedicamentos;
@@ -158,15 +106,5 @@ public class Historial {
 
 	public void setTieneMedicamentos(boolean tieneMedicamentos) {
 		this.tieneMedicamentos = tieneMedicamentos;
-	}
-
-
-	public String getRecomendaciones() {
-		return recomendaciones;
-	}
-
-
-	public void setRecomendaciones(String recomendaciones) {
-		this.recomendaciones = recomendaciones;
 	}
 }
