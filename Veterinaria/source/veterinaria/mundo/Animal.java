@@ -37,17 +37,13 @@ public abstract class Animal {
 	/**
 	 * Representa la fecha de ingreso por primera vez del animal
 	 */
-	private Date fechaUltimoIngreso;
+	private Date fechaNacimiento;
 	
 	
 	/**
 	 * Representa el nivel de alimento que necesita el animal para sobrevivir
 	 */
 	private int nivelAlimento;
-	
-	
-	private Historial historialAnimal;
-	
 	
 	private int nivelMinimoAlimento;
 
@@ -60,26 +56,24 @@ public abstract class Animal {
 	 * @param idAnimal Id del animal
 	 * @param edad Edad del animal
 	 * @param nombreAnimal Nombre del animal
-	 * @param fechaIngreso Fecha de ingreso
+	 * @param fecha Fecha de ingreso
 	 */
-	public Animal(int idAnimal, int edad, String nombreAnimal, Date fechaIngreso,Historial historial) {
+	public Animal(int idAnimal, int edad, String nombreAnimal, Date fecha) {
 		this.idAnimal = idAnimal;
 		this.edad = edad;
 		this.nombreAnimal = nombreAnimal;
-		this.fechaUltimoIngreso = fechaIngreso;
+		this.fechaNacimiento = fecha;
 		this.nivelAlimento = 80;
-		this.historialAnimal = historial;
 		this.nivelMinimoAlimento = 0;
 	}
 	
 
-	public Animal ( int edad, String nombreAnimal, Date fechaIngreso) {
+	public Animal ( int edad, String nombreAnimal, Date fecha) {
 		this.idAnimal = IdSiguiente; IdSiguiente++;
 		this.edad = edad;
 		this.nombreAnimal = nombreAnimal;
-		this.fechaUltimoIngreso = fechaIngreso;
+		this.fechaNacimiento = fecha;
 		this.nivelAlimento = 80;
-		this.historialAnimal = null;
 		this.nivelMinimoAlimento = 0;
 	}
 
@@ -124,8 +118,8 @@ public abstract class Animal {
 	 * Retorna la fecha de ingreso del animal
 	 * @return fecha de ingreso
 	 */
-	public Date getFechaIngreso() {
-		return fechaUltimoIngreso;
+	public Date getFechaNacimiento() {
+		return fechaNacimiento;
 	}
 	
 	/**
@@ -146,15 +140,6 @@ public abstract class Animal {
 
 	public void setNivelMinimoAlimento(int nivelMinimoAlimento) {
 		this.nivelMinimoAlimento = nivelMinimoAlimento;
-	}
-
-	public Historial getHistorialAnimal() {
-		return historialAnimal;
-	}
-
-
-	public void setHistorialAnimal(Historial historialAnimal) {
-		this.historialAnimal = historialAnimal;
 	}
 
 	/*
