@@ -5,56 +5,78 @@ import java.util.*;
 public class ClinicaVeterinaria {
 	
 	/*
-	 * Constantes
-	 */
-	public final static int MAX_EMPLEADOS = 50;
-	
-	/*
 	 * Atributos
 	 */
+	/**
+	 * Atributo que representa la lista de animales que se han registrado en la clínica veterinaria
+	 */
 	private List<Animal> listaAnimales;
-	private Empleado[] listaEmpleados;
-	private List<Historial> listaHistoriales;
+	
+	/**
+	 * Atributo que representa una lista de empleados con los empleados de la clínica veterinaria
+	 */
+	private List<Empleado> listaEmpleados;	
 	
 	
+	/*
+	 * Constructor
+	 */
+	
+	/**
+	 * Constructor de la clínica veterinaria
+	 */
 	public ClinicaVeterinaria() {
 		listaAnimales = new ArrayList<Animal>();
-		listaEmpleados = new Empleado[MAX_EMPLEADOS];
-		listaHistoriales = new ArrayList<Historial>();
+		listaEmpleados = new ArrayList<Empleado>();
 	}
 	
 	/*
 	 * Metodos
 	 */
 	
+	/**
+	 * Retorna la lista de animales de la clínica
+	 * @return lista de animales registrados en la clínica
+	 */
 	public List<Animal> getListaAnimales() {
 		return listaAnimales;
 	}
-	public void setListaAnimales(ArrayList<Animal> listaAnimales) {
-		this.listaAnimales = listaAnimales;
-	}
-	public Empleado[] getListaEmpleados() {
-		return listaEmpleados;
-	}
-	public void setListaEmpleados(Empleado[] listaEmpleados) {
-		this.listaEmpleados = listaEmpleados;
+	
+	public void agregarAnimal (Animal a) {
+		listaAnimales.add(a);
 	}
 	
-	public List<Historial> getListaHistoriales() {
-		return listaHistoriales;
+	/**
+	 * Retorna la lista de empleados de la clínica
+	 * @return lista de empleados de la clínica
+	 */
+	public List<Empleado> getListaEmpleados() {
+		return listaEmpleados;
+	}
+	
+	public void agregarEmpleado( Empleado e) {
+		listaEmpleados.add(e);
 	}
 
-	public void setListaHistoriales(List<Historial> listaHistoriales) {
-		this.listaHistoriales = listaHistoriales;
-	}
-
+	/**
+	 * Retorna un animal dado su id
+	 * @param idAnimal Id del animal a buscar
+	 * @return animal buscado. Si no se encuentra, retorna null
+	 */
 	public Animal retornarAnimal( String idAnimal ) {
 		return null;
 	}
 	
+	/**
+	 * Retorna una lista de animales dado el nombre del animal y el dueño del animal
+	 * @param nombreAnimal Nombre del animal buscado
+	 * @param nombreDuenho Nombre del dueño del animal buscado
+	 * @return lista de animales que tienen como nombre y dueño los dados por parámetro
+	 */
 	public List<Animal> retornarListaAnimales ( String nombreAnimal, String nombreDuenho ){
 		return null;
 	}
+	
 	
 	public String asignarCita ( Date fecha) {
 		return "";
@@ -78,6 +100,16 @@ public class ClinicaVeterinaria {
 	
 	public boolean darDeAlta ( int id) {
 		return true;
+	}
+	
+	public static void main(String[] args) {
+		String s = new String("5-1994'");
+		String[] partes = s.split("[-' ]+");
+		System.out.println(partes.length);
+		System.out.println(partes.toString());
+		for ( String p: partes) {
+			System.out.println("Palabra: " + p + "\t");
+		}
 	}
 	
 }

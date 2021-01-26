@@ -123,5 +123,10 @@ public abstract class Animal {
 		}
 		return "El animal no necesita alimento aún";
 	}
+
+	@Override
+	public String toString() {
+		return this.idAnimal + ". "+ this.nombreAnimal ;
+	}
 	
 }

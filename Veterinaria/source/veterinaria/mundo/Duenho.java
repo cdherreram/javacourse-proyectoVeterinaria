@@ -13,7 +13,7 @@ public class Duenho {
     private String nombreCompleto;
     private String direccionDeDomicilio; 
     private int cedulaCiudadania;
-    private int telefonoContacto;
+    private String telefonoContacto;
     
     /**
      * Construye un objeto de tipo Duenho con los atributos de la clase
@@ -23,7 +23,7 @@ public class Duenho {
      * @param telefonoContacto telefono fijo o móvil del dueño de la mascota
      */
 
-    public Duenho(String nombreCompleto, int cedulaCiudadania, int telefonoContacto, String direccionDeDomicilio) {
+    public Duenho(String nombreCompleto, int cedulaCiudadania, String telefonoContacto, String direccionDeDomicilio) {
         this.nombreCompleto = nombreCompleto;
         this.direccionDeDomicilio = direccionDeDomicilio;
         this.cedulaCiudadania = cedulaCiudadania;
@@ -35,7 +35,7 @@ public class Duenho {
      * @param nombreCompleto
      * @param telefonoContacto 
      */
-    public Duenho(String nombreCompleto, int telefonoContacto){
+    public Duenho(String nombreCompleto, String telefonoContacto){
         this.nombreCompleto = nombreCompleto;
         this.telefonoContacto = telefonoContacto;
         this.direccionDeDomicilio = "No hay data";
@@ -69,11 +69,11 @@ public class Duenho {
         this.cedulaCiudadania = cedulaCiudadania;
     }
 
-    public int getTelefonoContacto() {
+    public String getTelefonoContacto() {
         return telefonoContacto;
     }
 
-    public void setTelefonoContacto(int telefonoContacto) {
+    public void setTelefonoContacto(String telefonoContacto) {
         this.telefonoContacto = telefonoContacto;
     }
     
