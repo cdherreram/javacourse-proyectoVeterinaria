@@ -17,18 +17,11 @@ public class Ave extends Animal{
 	 * Constructores
 	 */
 
-	public Ave(int idAnimal, int edad, String nombreAnimal, Date fechaIngreso, String estadoPlumaje) {
-		super(idAnimal, edad, nombreAnimal, fechaIngreso);
+	public Ave(int idAnimal,String nombreAnimal, Date fechaNacimiento, Duenho duenho, String estadoPlumaje) {
+		super( idAnimal, nombreAnimal,  fechaNacimiento,  duenho);
 		this.estadoPlumaje = estadoPlumaje;
 		setNivelMinimoAlimento(NIVEL_MINIMO_ALIMENTO_AVE);
 	}
-
-	public Ave(int edad, String nombreAnimal, Date fechaIngreso, String estadoPlumaje) {
-		super(edad, nombreAnimal, fechaIngreso);
-		this.estadoPlumaje = estadoPlumaje;
-		setNivelMinimoAlimento(NIVEL_MINIMO_ALIMENTO_AVE);
-	}
-	
 	
 	/*
 	 * Métodos

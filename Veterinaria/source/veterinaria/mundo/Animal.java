@@ -20,16 +20,6 @@ public abstract class Animal {
 	private int idAnimal;
 	
 	/**
-	 * Representa el conteo de los id para la clase animal
-	 */
-	private static int IdSiguiente = 1;
-	
-	/**
-	 * Representa la edad del animal
-	 */
-	private int edad;
-	
-	/**
 	 * Representa el nombre del animal
 	 */
 	private String nombreAnimal;
@@ -39,13 +29,14 @@ public abstract class Animal {
 	 */
 	private Date fechaNacimiento;
 	
-	
 	/**
 	 * Representa el nivel de alimento que necesita el animal para sobrevivir
 	 */
 	private int nivelAlimento;
 	
 	private int nivelMinimoAlimento;
+	
+	private Duenho duenho;
 
 	/*
 	 * Constructores
@@ -56,76 +47,45 @@ public abstract class Animal {
 	 * @param idAnimal Id del animal
 	 * @param edad Edad del animal
 	 * @param nombreAnimal Nombre del animal
-	 * @param fecha Fecha de ingreso
+	 * @param fechaNacimiento Fecha de ingreso
 	 */
-	public Animal(int idAnimal, int edad, String nombreAnimal, Date fecha) {
+	public Animal(int idAnimal,String nombreAnimal, Date fechaNacimiento, Duenho duenho) {
 		this.idAnimal = idAnimal;
-		this.edad = edad;
 		this.nombreAnimal = nombreAnimal;
-		this.fechaNacimiento = fecha;
+		this.fechaNacimiento = fechaNacimiento;
 		this.nivelAlimento = 80;
 		this.nivelMinimoAlimento = 0;
-	}
-	
-
-	public Animal ( int edad, String nombreAnimal, Date fecha) {
-		this.idAnimal = IdSiguiente; IdSiguiente++;
-		this.edad = edad;
-		this.nombreAnimal = nombreAnimal;
-		this.fechaNacimiento = fecha;
-		this.nivelAlimento = 80;
-		this.nivelMinimoAlimento = 0;
+		this.duenho = duenho;
 	}
 
 	/*
 	 * Metodos
 	 * 
 	 */
-
-	/**
-	 * Retorna la edad del animal
-	 * @return Edad del animal
-	 */
-	public int getEdad( ) {
-		return edad;
-	}
-
-	/**
-	 * Cambia la edad por parï¿½metro
-	 * @param edad Nueva edad del animal
-	 */
-	public void setEdad(int edad) {
-		this.edad = edad;
-	}
-
-	/**
-	 * Retorna el id del animal
-	 * @return id del animal
-	 */
 	public int getIdAnimal() {
 		return idAnimal;
 	}
 
-	/**
-	 * Retorna el nombre del animal
-	 * @return nombre del animal
-	 */
+	public void setIdAnimal(int idAnimal) {
+		this.idAnimal = idAnimal;
+	}
+
 	public String getNombreAnimal() {
 		return nombreAnimal;
 	}
 
-	/**
-	 * Retorna la fecha de ingreso del animal
-	 * @return fecha de ingreso
-	 */
+	public void setNombreAnimal(String nombreAnimal) {
+		this.nombreAnimal = nombreAnimal;
+	}
+
 	public Date getFechaNacimiento() {
 		return fechaNacimiento;
 	}
-	
-	/**
-	 * Retorna el nivel de alimento que tiene el animal actualmente
-	 * @return nivel de alimento
-	 */
+
+	public void setFechaNacimiento(Date fechaNacimiento) {
+		this.fechaNacimiento = fechaNacimiento;
+	}
+
 	public int getNivelAlimento() {
 		return nivelAlimento;
 	}
@@ -133,7 +93,7 @@ public abstract class Animal {
 	public void setNivelAlimento(int nivelAlimento) {
 		this.nivelAlimento = nivelAlimento;
 	}
-	
+
 	public int getNivelMinimoAlimento() {
 		return nivelMinimoAlimento;
 	}
@@ -142,9 +102,15 @@ public abstract class Animal {
 		this.nivelMinimoAlimento = nivelMinimoAlimento;
 	}
 
-	/*
-	 * Métodos
-	 */
+	public Duenho getDuenho() {
+		return duenho;
+	}
+
+	public void setDuenho(Duenho duenho) {
+		this.duenho = duenho;
+	}
+
+	
 	public abstract boolean proximaAlimentacion( );
 	
 	public String registrarOperacionEnHistorial (String operacion) {

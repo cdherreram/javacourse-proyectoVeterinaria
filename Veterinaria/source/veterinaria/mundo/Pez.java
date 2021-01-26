@@ -17,18 +17,11 @@ public class Pez extends Animal{
 	 * Constructores
 	 */
 
-	public Pez(int idAnimal, int edad, String nombreAnimal, Date fechaIngreso, int peceraAsignada) {
-		super(idAnimal, edad, nombreAnimal, fechaIngreso);
+	public Pez(int idAnimal,String nombreAnimal, Date fechaNacimiento, Duenho duenho, int peceraAsignada) {
+		super( idAnimal, nombreAnimal,  fechaNacimiento,  duenho);
 		this.peceraAsignada = peceraAsignada;
 		setNivelMinimoAlimento(NIVEL_MINIMO_ALIMENTO_PEZ);
 	}
-
-	public Pez(int edad, String nombreAnimal, Date fechaIngreso, int peceraAsignada, double nivelMinimoAlimento) {
-		super(edad, nombreAnimal, fechaIngreso);
-		this.peceraAsignada = peceraAsignada;
-		setNivelMinimoAlimento(NIVEL_MINIMO_ALIMENTO_PEZ);
-	}
-	
 	
 	/*
 	 * Métodos
