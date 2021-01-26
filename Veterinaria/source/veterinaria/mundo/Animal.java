@@ -7,6 +7,7 @@ package veterinaria.mundo;
  */
 
 import java.util.*;
+import java.io.*;
 
 public abstract class Animal {
 	
@@ -112,8 +113,16 @@ public abstract class Animal {
 
 	public abstract boolean proximaAlimentacion( );
 	
-	public String registrarOperacionEnHistorial (String operacion) {
-		return "";
+	public boolean registrarOperacionEnHistorial (String operacion) {
+		try {
+			BufferedWriter myfile = new BufferedWriter(new FileWriter("data/animales.csv", true));
+			myfile.write(operacion);
+			myfile.close();
+			return true;
+		} catch (Exception e){
+			System.out.println("Cristian y Daniel son amigos :P. Jajaja");
+			return false;
+		}
 	}
 	
 	public String alimentar() {
@@ -121,7 +130,7 @@ public abstract class Animal {
 			setNivelAlimento(100);
 			return "El nuevo nivel de alimento es " + getNivelAlimento();
 		}
-		return "El animal no necesita alimento aún";
+		return "El animal no necesita alimento aï¿½n";
 	}
 
 	@Override
