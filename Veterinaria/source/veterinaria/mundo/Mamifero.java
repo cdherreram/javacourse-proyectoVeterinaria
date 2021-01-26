@@ -10,7 +10,7 @@ public class Mamifero extends Animal{
 	 * Constructores
 	 */
 
-	public Mamifero(int idAnimal,String nombreAnimal, Date fechaNacimiento, Duenho duenho) {
+	public Mamifero(String idAnimal,String nombreAnimal, Calendar fechaNacimiento, Duenho duenho) {
 		super(idAnimal, nombreAnimal,  fechaNacimiento,  duenho);
 		setNivelMinimoAlimento(NIVEL_MINIMO_ALIMENTO_MAMIFERO);
 	}

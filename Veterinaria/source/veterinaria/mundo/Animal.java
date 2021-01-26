@@ -15,9 +15,9 @@ public abstract class Animal {
 	 */
 	
 	/**
-	 * Representa el id del animal (en meses)
+	 * Representa el id del animal
 	 */
-	private int idAnimal;
+	private String idAnimal;
 	
 	/**
 	 * Representa el nombre del animal
@@ -27,7 +27,7 @@ public abstract class Animal {
 	/**
 	 * Representa la fecha de ingreso por primera vez del animal
 	 */
-	private Date fechaNacimiento;
+	private Calendar fechaNacimiento;
 	
 	/**
 	 * Representa el nivel de alimento que necesita el animal para sobrevivir
@@ -49,7 +49,7 @@ public abstract class Animal {
 	 * @param nombreAnimal Nombre del animal
 	 * @param fechaNacimiento Fecha de ingreso
 	 */
-	public Animal(int idAnimal,String nombreAnimal, Date fechaNacimiento, Duenho duenho) {
+	public Animal(String idAnimal,String nombreAnimal, Calendar fechaNacimiento, Duenho duenho) {
 		this.idAnimal = idAnimal;
 		this.nombreAnimal = nombreAnimal;
 		this.fechaNacimiento = fechaNacimiento;
@@ -62,11 +62,11 @@ public abstract class Animal {
 	 * Metodos
 	 * 
 	 */
-	public int getIdAnimal() {
+	public String getIdAnimal() {
 		return idAnimal;
 	}
 
-	public void setIdAnimal(int idAnimal) {
+	public void setIdAnimal(String idAnimal) {
 		this.idAnimal = idAnimal;
 	}
 
@@ -78,12 +78,12 @@ public abstract class Animal {
 		this.nombreAnimal = nombreAnimal;
 	}
 
-	public Date getFechaNacimiento() {
-		return fechaNacimiento;
+	public String getFechaNacimiento() {
+		return fechaNacimiento.get(Calendar.MONTH) + "/" + fechaNacimiento.get(Calendar.YEAR);
 	}
 
-	public void setFechaNacimiento(Date fechaNacimiento) {
-		this.fechaNacimiento = fechaNacimiento;
+	public void setFechaNacimiento(int year, int month) {
+		this.fechaNacimiento.set(year, month, 1);;
 	}
 
 	public int getNivelAlimento() {
@@ -110,7 +110,6 @@ public abstract class Animal {
 		this.duenho = duenho;
 	}
 
-	
 	public abstract boolean proximaAlimentacion( );
 	
 	public String registrarOperacionEnHistorial (String operacion) {

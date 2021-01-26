@@ -1,6 +1,6 @@
 package veterinaria.mundo;
 
-import java.util.Date;
+import java.util.*;
 
 public class Ave extends Animal{
 	
@@ -17,7 +17,7 @@ public class Ave extends Animal{
 	 * Constructores
 	 */
 
-	public Ave(int idAnimal,String nombreAnimal, Date fechaNacimiento, Duenho duenho, String estadoPlumaje) {
+	public Ave(String idAnimal,String nombreAnimal, Calendar fechaNacimiento, Duenho duenho, String estadoPlumaje) {
 		super( idAnimal, nombreAnimal,  fechaNacimiento,  duenho);
 		this.estadoPlumaje = estadoPlumaje;
 		setNivelMinimoAlimento(NIVEL_MINIMO_ALIMENTO_AVE);
