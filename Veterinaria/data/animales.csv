@@ -1,4 +1,25 @@
-id;numId;NombreDuenho;Animal;NombreAnimal;Fecha(MMAAAA);direccion;Telefono;
-;;;;;;;;
-;;;;;;;;
-;;;;;;;;
+numId;numAnimal;NombreDuenho;Animal;NombreAnimal;Fecha(MMAAAA);direccion;Telefono
+1;1058086885;Mateo;mamifero;Lulu;8-2010';Calle 22;3231318325
+1;1075547956;Juan;mamifero;Motas;11-2020';Calle 23;3325220792
+1;1009148951;Pedro;mamifero;Lucas;12-2013';Calle 24;3187185438
+1;1024810975;Lucas;mamifero;Firulais;4-2020';Calle 25;3040220346
+1;1061334541;Andres;mamifero;Lulu;12-2012';Calle 26;3090164223
+1;1009609697;Mauricio;mamifero;Lulu;7-2013';Calle 27;3464244097
+1;1054784470;Lina;mamifero;Motas;3-2016';Calle 28;3343379801
+1;1093432643;Katherine;mamifero;Lucas;1-2014';Calle 29;3356304542
+1;1082045142;Patricia;mamifero;Firulais;6-2016';Calle 30;3180307390
+1;1021532809;Camila;mamifero;Lulu;1-2015';Calle 31;3218798881
+1;1047791448;Mario;pez;Motas;9-2011';Calle 32;3318201465
+1;1070350259;Daniel;pez;Lucas;1-2011';Calle 33;3253259236
+1;1031675236;Julian;pez;Firulais;3-2012';Calle 34;3310126126
+1;1089740675;Cristian;pez;Lulu;7-2010';Calle 35;3227978786
+1;1026832118;David;pez;Motas;10-2014';Calle 36;3363034930
+1;1022463857;Luis;pez;Lucas;2-2019';Calle 37;3063051732
+1;1053042748;Mario;pez;Firulais;2-2018';Calle 38;3151497345
+1;1003916092;Daniel;ave;Lulu;11-2020';Calle 39;3332679296
+1;1078750101;Julian;ave;Motas;1-2020';Calle 40;3364947064
+1;1003675317;Cristian;ave;Lucas;10-2014';Calle 41;3374151070
+1;1077195006;David;ave;Firulais;1-2018';Calle 42;3272084710
+1;1066094171;Pedro;ave;Lulu;12-2018';Calle 43;3302479181
+1;1007307729;Lucas;ave;Motas;7-2013';Calle 44;3274608005
+1;1087087848;Andres;ave;Lucas;2-2011';Calle 45;3212308765
