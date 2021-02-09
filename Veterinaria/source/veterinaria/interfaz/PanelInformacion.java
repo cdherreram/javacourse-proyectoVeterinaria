@@ -35,6 +35,7 @@ public class PanelInformacion extends JPanel {
 		labFechaIngreso = new JLabel("Fecha de ingreso");
 		
 		cbSeguro = new JCheckBox("Seguro médico");
+		cbSeguro.setEnabled(false);
 		
 		txtNombre = new JTextField();
 		txtNombre.setEditable(false);
